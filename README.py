@@ -2,7 +2,6 @@
 New Project
 import random
 
-
 def function():
     number = random.randint(1, 9)
     computer = 0
