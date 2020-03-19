@@ -3,22 +3,11 @@ import random
 
 # 1. Symbols, dummy/only one time used
 def boa():
-    global winner1, winner2
-    name = {
-        "num1": "!",
-        "num2": "@",
-        "num3": "#",
-        "num4": "$",
-        "num5": "%",
-        "num6": "^",
-        "num7": "&",
-        "num8": "*",
-        "num9": "?"
-    }
+
     board = [
-        [f"{name.get('num1')}", f"{name.get('num2')}", f"{name.get('num3')}"],
-        [f"{name.get('num4')}", f"{name.get('num5')}", f"{name.get('num6')}"],
-        [f"{name.get('num7')}", f"{name.get('num8')}", f"{name.get('num9')}"]
+        [" ", " ", " "],
+        [" ", " ", " "],
+        [" ", " ", " "]
     ]
     print_boa(board)
 
@@ -72,18 +61,17 @@ def print_boa(bo, fro_d=False):
 
 # 3. input and changing symbol/ main
 def user(bo):
-    val = ""
+    val = 0
     global co_value
     global value
     global counter
     if value:
-        val = input("Which position: ")
-
-        for item in range(len(bo)):
-            for i in range(len(bo[0])):
-                if val == bo[item][i]:
-                    counter += 1
-                    bo[item][i] = use
+        val = int(input("Which position: ")) - 1
+        counter += 1
+        if val <= 2:
+            bo[0][val] = use
+        elif val > 2:
+            bo[val // 3][val % 3] = use
 
         co_value = False
     decider(bo, counter, fro=True)
@@ -361,5 +349,6 @@ while start == "y" or re == "y":
     winner2 = ""
     boa()
     start = "n"
+
     re = input("Do you want to play again(y or n): ")
 
