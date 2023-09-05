@@ -1,13 +1,11 @@
-# Importing Modules/Libraries
 import tweepy
 import time
 
-# Credentials (Insert your keys and tokens below)
-api_key = "j18sAlk5TV5hReg5eraHpSIbs"
-api_secret = "c5qQqj4rFIXQpd7CmJRsPaCC8TiF3eRKErFwuPVrjOrachttbx"
-bearer_token = r"AAAAAAAAAAAAAAAAAAAAANCIoAEAAAAAxJMHjQGWTMRMrxkpCQrmq%2B5Tgvw%3DfKcg350KT0BHJnuYFktg2j8mJ5KJuFO5bMV2MyFfmBtSSCGYJ3"
-access_token = "1668244310536622081-g1qbvQ8rjkDWfPLHWlppXcTmqF3Y4R"
-access_token_secret = "YGuAObwBbwDhVZzMEvthEJHC6Ip3jJwGtT5zZfOYwQXJB"
+api_key = ""
+api_secret = ""
+bearer_token = r""
+access_token = ""
+access_token_secret = ""
 
 # Connecting to Twitter API
 client = tweepy.Client(bearer_token, api_key, api_secret, access_token, access_token_secret)
